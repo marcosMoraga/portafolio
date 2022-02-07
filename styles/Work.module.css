@@ -5,15 +5,7 @@
 .container__module a {
   margin: 1rem;
 }
-.background__image {
-  height: 100%;
-  width: 100%;
-  opacity: 0.8;
-  position: fixed;
-  background-position: center center;
-  background-size: cover;
-  background-image: url(/proyect-3.png);
-}
+
 .proyects__container {
   display: flex;
   width: 100%;

@@ -6,6 +6,7 @@ import styles from "../../styles/Work.module.css";
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
 import { HiOutlineHome } from "react-icons/hi";
+import Image from 'next/image'
 const proyects = [
     {
         name: "mytinerary",
@@ -116,7 +117,7 @@ const proyects = [
 ];
 
 const Modules = () => {
-    const img = useRef();
+    const [img, setImg] = useState('/proyect-3.png');
     const demo = useRef();
     const [step, setStep] = useState(1);
     const [description, setDescription] = useState({
@@ -130,7 +131,7 @@ const Modules = () => {
 
     const getView = (paramView) => {
         const filteredView = proyects.find((proyect) => proyect.name === paramView);
-        img.current.style.backgroundImage = `url(${filteredView.img})`;
+        setImg(filteredView.img);
         demo.current.href = filteredView.url;
         setDescription({
             role: filteredView.description.role,
@@ -184,11 +185,8 @@ const Modules = () => {
                     />
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
-                <div
-                    ref={img}
-                    className={styles.background__image}
-                ></div>
 
+                <Image src={img} layout='fill'></Image>
                 <article
                     className={styles.article}
                 >
