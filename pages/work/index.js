@@ -75,7 +75,7 @@ const proyects = [
             ],
         },
         url: "https://brokandfix.herokuapp.com/",
-        img: "/proyect-1.png",
+        img: "/proyect-1.jpg",
     },
     {
         name: "proyecto z",
@@ -112,7 +112,7 @@ const proyects = [
             ],
         },
         url: "https://proyectzzzz.netlify.app/",
-        img: "/proyect-2.png",
+        img: "/proyect-2.jpg",
     },
 ];
 
