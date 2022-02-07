@@ -40,7 +40,7 @@ const proyects = [
                 "Validador - formulario de registro",
             ],
         },
-        img: "/proyect-3.png",
+        img: "/proyect-3.jpg",
     },
     {
         name: "broke & fix",
