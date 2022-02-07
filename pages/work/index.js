@@ -117,7 +117,7 @@ const proyects = [
 ];
 
 const Modules = () => {
-    const [img, setImg] = useState('/proyect-3.png');
+    const [img, setImg] = useState('/_next/image?url=%2Fproyect-3.png&w=3840&q=75');
     const demo = useRef();
     const [step, setStep] = useState(1);
     const [description, setDescription] = useState({
