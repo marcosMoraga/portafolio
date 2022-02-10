@@ -84,6 +84,35 @@
   flex-direction: column;
   overflow: hidden;
 }
+@media (max-width: 768px) {
+  .proyects {
+    transform: translateY(20.5px);
+  }
+  .proyects__paragraph__container {
+    height: 160px;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+  }
+  .proyects__paragraph {
+    width: 60%;
+  }
+  .proyects__paragraph_text {
+    padding: 0.5rem;
+  }
+  .proyects__actions {
+    display: flex;
+    width: 70%;
+    height: 20%;
+    flex-direction: row;
+  }
+  .proyects__actions_home {
+    font-size: 1.2rem;
+  }
+  .proyects__actions_email {
+    font-size: 1.2rem;
+  }
+}
 
 @keyframes danceDown {
   0% {

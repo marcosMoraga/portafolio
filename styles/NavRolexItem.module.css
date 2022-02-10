@@ -195,3 +195,47 @@
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
 }
+@media (max-width: 768px) {
+  .z1 {
+    width: 150px;
+    height: 150px;
+  }
+  .z2 {
+    width: 150px;
+    height: 150px;
+  }
+  .z3 {
+    width: 150px;
+    height: 150px;
+  }
+  .z4 {
+    width: 150px;
+    height: 150px;
+  }
+  .nav {
+    width: 200px;
+    height: 200px;
+    transform: translate(-100px);
+  }
+  .z5 {
+    width: 150px;
+    height: 150px;
+  }
+  .z6 {
+    width: 150px;
+    height: 150px;
+  }
+  .nav__items {
+    height: 200px;
+  }
+  .nav__inside__arrow__container {
+    margin-right: 4.5rem;
+  }
+  .nav__actions_down {
+  }
+  .nav__actions_up {
+  }
+  .nav__inside__arrow {
+    font-size: 1rem;
+  }
+}
