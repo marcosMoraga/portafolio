@@ -232,8 +232,10 @@
     margin-right: 4.5rem;
   }
   .nav__actions_down {
+    transform: rotate(45deg) translate(-1rem, 6rem);
   }
   .nav__actions_up {
+    transform: rotate(-45deg) translate(-1rem, -6rem);
   }
   .nav__inside__arrow {
     font-size: 1rem;
