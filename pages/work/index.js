@@ -195,7 +195,7 @@ const Modules = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Image src={image} layout='fill'></Image>
+            {/* <Image src={image} height="100%" layout='fill'></Image> */}
             <article
                 className={styles.article}
             >

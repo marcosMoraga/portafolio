@@ -1,8 +1,10 @@
 .container__module {
-  display: flex;
-  flex-direction: column;
   animation: danceDown 2s ease;
   height: 100vh;
+  width: 100vw;
+  background-position: center center;
+  background-size: cover;
+  background-image: url(https://media.istockphoto.com/photos/modern-architecture-in-paris-picture-id1279017302?s=612x612);
 }
 .container__module a {
   margin: 1rem;
