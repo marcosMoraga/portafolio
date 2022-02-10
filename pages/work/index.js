@@ -187,7 +187,7 @@ const Modules = () => {
     );
 
     return (
-        <div className={styles.container__module}>
+        <div style={{ backgroundImage: `url(${image})` }} className={styles.container__module}>
             <Head>
                 <title>Trabajo | Marcos Moraga</title>
                 <meta charSet="UTF-8" />
