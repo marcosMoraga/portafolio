@@ -1,6 +1,8 @@
 .container__module {
+  display: flex;
+  flex-direction: column;
   animation: danceDown 2s ease;
-  width: 100vw;
+  height: 100vh;
 }
 .container__module a {
   margin: 1rem;
