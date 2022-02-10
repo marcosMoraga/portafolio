@@ -187,109 +187,107 @@ const Modules = () => {
     );
 
     return (
-        <>
-            <div className={styles.container__module}>
-                <Head>
-                    <title>Trabajo | Marcos Moraga</title>
-                    <meta charSet="UTF-8" />
+        <div className={styles.container__module}>
+            <Head>
+                <title>Trabajo | Marcos Moraga</title>
+                <meta charSet="UTF-8" />
 
-                    <link rel="icon" href="/favicon.ico" />
-                </Head>
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
 
-                <Image src={image} layout='fill'></Image>
-                <article
-                    className={styles.article}
+            <Image src={image} layout='fill'></Image>
+            <article
+                className={styles.article}
+            >
+                <div
+                    id="proyects"
+                    className={styles.proyects__container}
                 >
+                    {renderComponent}
                     <div
-                        id="proyects"
-                        className={styles.proyects__container}
-                    >
-                        {renderComponent}
-                        <div
 
-                            className={styles.proyects}
+                        className={styles.proyects}
+                    >
+                        <div
+                            onMouseEnter={() => setHover(true)}
+                            onMouseLeave={() => setHover(false)}
+
+                            className={styles.proyects__paragraph__container}
                         >
                             <div
-                                onMouseEnter={() => setHover(true)}
-                                onMouseLeave={() => setHover(false)}
 
-                                className={styles.proyects__paragraph__container}
+                                className={styles.proyects__paragraph}
                             >
                                 <div
 
-                                    className={styles.proyects__paragraph}
+                                    className={styles.proyects__paragraph_steper_container}
                                 >
-                                    <div
+                                    <BsChevronLeft
+                                        onClick={() => {
+                                            step > 1 && setStep((prev) => prev - 1);
+                                        }}
 
-                                        className={styles.proyects__paragraph_steper_container}
-                                    >
-                                        <BsChevronLeft
-                                            onClick={() => {
-                                                step > 1 && setStep((prev) => prev - 1);
-                                            }}
+                                        className={styles.proyects__paragraph_steper_left}
+                                    />
+                                    <span>{step}/5</span>
+                                    <BsChevronRight
+                                        onClick={() => {
+                                            step < 5 && setStep((prev) => prev + 1);
+                                        }}
 
-                                            className={styles.proyects__paragraph_steper_left}
-                                        />
-                                        <span>{step}/5</span>
-                                        <BsChevronRight
-                                            onClick={() => {
-                                                step < 5 && setStep((prev) => prev + 1);
-                                            }}
-
-                                            className={styles.proyects__paragraph_steper_right}
-                                        />
-                                    </div>
-                                    <h2 className={styles.proyects__paragraph_title} >
-                                        {step === 1 && "Rol"}
-                                        {step === 2 && "Dificultades"}
-                                        {step === 3 && "Solución"}
-                                        {step === 4 && "Características destacables"}
-                                        {step === 5 && "Tecnologías"}
-                                    </h2>
-                                    {(step !== 4 && step !== 5) ?
-                                        <p
-                                            className={styles.proyects__paragraph_text}
-                                        >
-                                            {step === 1 && description.role}
-                                            {step === 2 && description.dificulties}
-                                            {step === 3 && description.solution}
-                                        </p>
-                                        :
-                                        <ul className={styles.proyects__paragraph_list} >
-                                            {step === 4 ? description.features.map(feature => <li key={feature}>{feature}</li>) : description.tech.map(tech => <li key={tech}>{tech}</li>)}
-                                        </ul>
-                                    }
-
+                                        className={styles.proyects__paragraph_steper_right}
+                                    />
                                 </div>
-                                <div
-                                    style={{
+                                <h2 className={styles.proyects__paragraph_title} >
+                                    {step === 1 && "Rol"}
+                                    {step === 2 && "Dificultades"}
+                                    {step === 3 && "Solución"}
+                                    {step === 4 && "Características destacables"}
+                                    {step === 5 && "Tecnologías"}
+                                </h2>
+                                {(step !== 4 && step !== 5) ?
+                                    <p
+                                        className={styles.proyects__paragraph_text}
+                                    >
+                                        {step === 1 && description.role}
+                                        {step === 2 && description.dificulties}
+                                        {step === 3 && description.solution}
+                                    </p>
+                                    :
+                                    <ul className={styles.proyects__paragraph_list} >
+                                        {step === 4 ? description.features.map(feature => <li key={feature}>{feature}</li>) : description.tech.map(tech => <li key={tech}>{tech}</li>)}
+                                    </ul>
+                                }
 
-                                    }}
-                                    className={styles.proyects__actions}
+                            </div>
+                            <div
+                                style={{
+
+                                }}
+                                className={styles.proyects__actions}
+                            >
+                                <Link href="/">
+                                    <a>
+                                        <HiOutlineHome className={styles.proyects__actions_home} />
+                                    </a>
+                                </Link>
+                                <a
+                                    ref={demo}
+                                    rel="noreferrer"
+                                    href="https://mytinerary-moraga.netlify.app/"
+                                    target="_blank"
                                 >
-                                    <Link href="/">
-                                        <a>
-                                            <HiOutlineHome className={styles.proyects__actions_home} />
-                                        </a>
-                                    </Link>
-                                    <a
-                                        ref={demo}
-                                        rel="noreferrer"
-                                        href="https://mytinerary-moraga.netlify.app/"
-                                        target="_blank"
-                                    >
-                                        DEMO
-                                    </a>
-                                    <a rel="noreferrer" href="mailto:moraga.dev@gmail.com">
-                                        <AiOutlineMail className={styles.proyects__actions_email} />
-                                    </a>
-                                </div>
+                                    DEMO
+                                </a>
+                                <a rel="noreferrer" href="mailto:moraga.dev@gmail.com">
+                                    <AiOutlineMail className={styles.proyects__actions_email} />
+                                </a>
                             </div>
                         </div>
                     </div>
-                </article>
-            </div>
-        </>
+                </div>
+            </article>
+        </div>
     );
 };
 

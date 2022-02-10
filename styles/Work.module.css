@@ -1,6 +1,6 @@
 .container__module {
   animation: danceDown 2s ease;
-  height: 100vh;
+  width: 100vw;
 }
 .container__module a {
   margin: 1rem;
