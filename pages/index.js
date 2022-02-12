@@ -29,7 +29,6 @@ export default function Home() {
                 <CardProyect />
                 <div className={styles.landing__main_card_container}>
                   <div className={styles.landing__main_card}>
-                    <div className={styles.landing__main_card_header_img}></div>
                     <div className={styles.landing__main_card_body}>
                       <h2>Sobre Mi</h2>
                       <p>Desarrollador full stack, apasionado por el desarrollo y la innovación, activo y motivado por los nuevos
